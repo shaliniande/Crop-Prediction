@@ -1,0 +1,120 @@
+<!--<!DOCTYPE html> 
+<html>
+<body>
+<div align="center">
+<h2>CROP PREDICTION</h2>
+<div style="background-image: url('E:/crop/crop2.jpg');"></div>
+<form method="POST" action="{{url_for('predict')}}" >
+  <label><b>Enter Nitrogen value:  </b> </label>
+  <input type = "text", name ="N", placeholder='Enter nitrogen value'><br><br>
+  <label><b>Enter Phosphorus value</b> </label>
+  <input type = "text", name ="P", placeholder='Enter Phosphorus value'><br><br>
+  <label><b>Enter Potassium value:  </b> </label>
+  <input type = "text", name ="K", placeholder='Enter Potassium value'><br><br>
+  <label><b>Enter Temperature value: </b> </label>
+  <input type = "text", name ="Temp", placeholder='Enter Temperature value'><br><br>
+  <label><b>Enter Humidity value:    </b> </label>
+  <input type = "text", name ="Humidity", placeholder='Enter Humidity value'><br><br>
+  <label><b>Enter pH value:        </b> </label>
+  <input type = "text", name ="pH", placeholder='Enter pH value'><br><br>
+  <label><b>Enter Rainfall value:   </b> </label>
+  <input type = "text", name ="Rainfall", placeholder='Enter Rainfall value'><br><br>
+  <input type="submit" value="predict">
+</form> 
+
+
+<p>predicted crop : </p><br>
+{{crop}}
+</div>
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="mystyle.css">
+<style>
+::-webkit-input-placeholder { 
+  font-weight: bold;
+  color : black
+}
+body {
+  background-image: url('https://images.unsplash.com/photo-1592079927431-3f8ced0dacc6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGFncmljdWx0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #323392;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+div {
+  border-radius: 5px;
+  padding: 20px;
+}
+#inner{
+  width: 50%;
+  background-color: #3aa3b1;
+  color: rgb(44, 54, 75);
+  padding: 5px 5px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+</style>
+</head>
+
+<body>
+<div align="center">
+  <h1><b>CROP PREDICTION</b></h1>
+
+  <form method="POST" action="{{url_for('predict')}}">
+    <!--<label><b>Enter Nitrogen value:  </b> </label>-->
+  <input type = "text", name ="N", placeholder='Enter nitrogen value'><br><br>
+  <!--<label><b>Enter Phosphorus value</b> </label>-->
+  <input type = "text", name ="P", placeholder='Enter Phosphorus value'><br><br>
+  <!--<label><b>Enter Potassium value:  </b> </label>-->
+  <input type = "text", name ="K", placeholder='Enter Potassium value'><br><br>
+  <!--<label><b>Enter Temperature value: </b> </label>-->
+  <input type = "text", name ="Temp", placeholder='Enter Temperature value'><br><br>
+  <!--<label><b>Enter Humidity value:    </b> </label>-->
+  <input type = "text", name ="Humidity", placeholder='Enter Humidity value'><br><br>
+  <!--<label><b>Enter pH value:        </b> </label>-->
+  <input type = "text", name ="pH", placeholder='Enter pH value'><br><br>
+  <!---<label><b>Enter Rainfall value:   </b> </label>-->
+  <input type = "text", name ="Rainfall", placeholder='Enter Rainfall value'><br><br>
+  <input type="submit" value="Predict">
+
+   
+  </form>
+  <div id = "inner" >
+    <p>Predicted crop : </p>
+    {{crop}} 
+  </div>
+</div>
+
+</body>
+</html>
